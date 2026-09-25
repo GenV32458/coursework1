@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Translate common English words and phrases into Luganda and French.">
+    <title>KYU Lingua | Language Text Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-glow page-glow-one"></div>
+    <div class="page-glow page-glow-two"></div>
+
+    <header class="site-header">
+        <a class="brand" href="#" aria-label="KYU Lingua home">
+            <span class="logo-wrap"><img src="kyulogo.jpeg" alt="Kyambogo University logo"></span>
+            <span><strong>KYU Lingua</strong><small>Language made simple</small></span>
+        </a>
+        <div class="student-project"><span></span> Student language project</div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <p class="eyebrow">Connect through language</p>
+            <h2>Words that bring us <em>closer.</em></h2>
+            <p class="hero-copy">Translate everyday English into Luganda or French — quickly, clearly and right from your browser.</p>
+        </section>
+
+        <section class="translator-card" aria-labelledby="translator-heading">
+            <h2 id="translator-heading" class="sr-only">Text translator</h2>
+            <div class="language-bar">
+                <div class="language-label">
+                    <span class="language-icon">EN</span>
+                    <span><small>Translate from</small><strong>English</strong></span>
+                </div>
+                <div class="direction-icon" aria-hidden="true">→</div>
+                <label class="language-select-wrap">
+                    <span class="language-icon" id="target-code">LG</span>
+                    <span><small>Translate to</small>
+                        <select id="target-language" aria-label="Choose target language">
+                            <option value="luganda">Luganda</option>
+                            <option value="french">French</option>
+                        </select>
+                    </span>
+                </label>
+            </div>
+
+            <div class="translation-area">
+                <div class="text-panel input-panel">
+                    <div class="panel-heading"><span>English text</span><span id="character-count">0 / 500</span></div>
+                    <textarea id="source-text" maxlength="500" placeholder="Type a word or phrase here..." autofocus></textarea>
+                    <button class="icon-button clear-button" id="clear-button" type="button" aria-label="Clear text" title="Clear text">×</button>
+                </div>
+                <div class="text-panel output-panel">
+                    <div class="panel-heading"><span id="output-label">Luganda translation</span><span id="translation-status">Ready</span></div>
+                    <div id="translated-text" class="translated-text" aria-live="polite"><span class="placeholder">Your translation will appear here.</span></div>
+                    <button class="icon-button copy-button" id="copy-button" type="button" aria-label="Copy translation" title="Copy translation">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="11" height="11" rx="2"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <p><span class="tip-icon">i</span> Try a common greeting or choose an example.</p>
+                <button id="translate-button" class="translate-button" type="button">Translate text <span>→</span></button>
+            </div>
+        </section>
+
+        <section class="examples" aria-labelledby="examples-heading">
+            <div class="section-heading">
+                <div><p class="eyebrow">Not sure what to write?</p><h2 id="examples-heading">Try an example</h2></div>
+                <p>Tap a phrase to translate it instantly.</p>
+            </div>
+            <div class="example-grid">
+                <button class="example-card" data-phrase="Hello"><span>👋</span><div><strong>Hello</strong><small>A friendly greeting</small></div><b>→</b></button>
+                <button class="example-card" data-phrase="How are you?"><span>☀️</span><div><strong>How are you?</strong><small>Start a conversation</small></div><b>→</b></button>
+                <button class="example-card" data-phrase="Thank you"><span>🙏</span><div><strong>Thank you</strong><small>Show appreciation</small></div><b>→</b></button>
+                <button class="example-card" data-phrase="What is your name?"><span>💬</span><div><strong>What is your name?</strong><small>Get to know someone</small></div><b>→</b></button>
+            </div>
+        </section>
+    </main>
+
+    <footer><img src="kyulogo.jpeg" alt=""><p>Built as a language learning project</p><span>English · Luganda · French</span></footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
